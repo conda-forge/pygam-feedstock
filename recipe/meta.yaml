@@ -1,6 +1,6 @@
 {% set name = "pygam" %}
-{% set version = "0.5.2" %}
-{% set sha256 = "a220ec76e8cabf69cdfad4d4404db4afb9768f6f86e92c69815d1ed97fb29124" %}
+{% set version = "0.7.2" %}
+{% set sha256 = "d414617afe52759bb10df7a91c5be7826c4e6645c31967adccecd2a6abbe4563" %}
 
 package:
   name: {{ name }}
