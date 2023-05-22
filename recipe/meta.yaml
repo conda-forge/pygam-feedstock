@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -34,8 +34,8 @@ test:
 
 about:
   home: https://github.com/dswah/pyGAM
-  license: GPL-3.0-or-later
-  license_family: GPL
+  license: Apache-2.0
+  license_family: Apache
   license_file: LICENSE
   summary: Generalized Additive Models in Python
   description: |
@@ -47,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - dswah
+    - jtilly
