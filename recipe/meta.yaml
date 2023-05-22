@@ -1,6 +1,6 @@
 {% set name = "pygam" %}
-{% set version = "0.8.0" %}
-{% set sha256 = "5cae01aea8b2fede72a6da0aba1490213af54b3476745666af26bbe700479166" %}
+{% set version = "0.9.0" %}
+{% set sha256 = "dba62285a275cdd15a6adf764f6717b3cd077502f01cf1bcee5ce7cbda221956" %}
 
 package:
   name: {{ name }}
@@ -14,14 +14,15 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
+    - poetry
   run:
-    - python
+    - python >=3.6
     - numpy
     - scipy >=0.17
     - progressbar2
@@ -33,7 +34,7 @@ test:
 
 about:
   home: https://github.com/dswah/pyGAM
-  license: GPLv3
+  license: GPL-3.0-or-later
   license_family: GPL
   license_file: LICENSE
   summary: Generalized Additive Models in Python
