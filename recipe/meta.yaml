@@ -23,6 +23,7 @@ requirements:
     - python >=3.8
     - pip
     - poetry
+    - poetry-dynamic-versioning
   run:
     - python >=3.8
     - numpy
