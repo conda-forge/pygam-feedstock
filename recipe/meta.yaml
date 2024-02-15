@@ -1,6 +1,6 @@
 {% set name = "pygam" %}
-{% set version = "0.9.0" %}
-{% set sha256 = "dba62285a275cdd15a6adf764f6717b3cd077502f01cf1bcee5ce7cbda221956" %}
+{% set version = "0.9.1" %}
+{% set sha256 = "a321a017bf485ed93fc6233e02621f8e7eab3d4f8971371c9ae9e079c55be01d" %}
 
 package:
   name: {{ name }}
@@ -14,19 +14,20 @@ source:
     - 0001-patch-versions.patch
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - pip
     - poetry
+    - poetry-dynamic-versioning
   run:
-    - python >=3.6
+    - python >=3.8
     - numpy
-    - scipy >=0.17
+    - scipy >=1.10
     - progressbar2
     - future
 
