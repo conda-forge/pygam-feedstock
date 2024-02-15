@@ -20,13 +20,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - pip
     - poetry
   run:
-    - python >=3.6
+    - python >=3.8
     - numpy
-    - scipy >=0.17
+    - scipy >=1.10
     - progressbar2
     - future
 
