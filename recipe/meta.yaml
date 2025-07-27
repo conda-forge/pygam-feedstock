@@ -1,6 +1,6 @@
 {% set name = "pygam" %}
-{% set version = "0.9.1" %}
-{% set sha256 = "a321a017bf485ed93fc6233e02621f8e7eab3d4f8971371c9ae9e079c55be01d" %}
+{% set version = "0.10.1" %}
+{% set sha256 = "0d7c0ba235919dfadfe2347ca89c4fed5879acd428a944633959a8e0cc3e0311" %}
 
 package:
   name: {{ name }}
@@ -14,7 +14,7 @@ source:
     - 0001-patch-versions.patch
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
