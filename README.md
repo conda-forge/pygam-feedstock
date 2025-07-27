@@ -151,5 +151,7 @@ Feedstock Maintainers
 =====================
 
 * [@dswah](https://github.com/dswah/)
+* [@fkiraly](https://github.com/fkiraly/)
 * [@jtilly](https://github.com/jtilly/)
+* [@marrov](https://github.com/marrov/)
 
