@@ -2,6 +2,15 @@ diff --git a/pyproject.toml b/pyproject.toml
 index 2fe8e8a..ba2b4c8 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
+@@ -1,9 +1,9 @@
+ [tool.poetry]
+ name = "pygam"
+-version = "0.0.0" # placeholder for dynamic versioning
++version = "0.9.1"
+ description = ""
+ authors = ["Daniel Servén Marín", "Charlie Brummitt"]
+ license = "Apache-2.0"
+ readme = "README.md"
 @@ -7,16 +7,10 @@ license = "Apache-2.0"
  readme = "README.md"
  
@@ -23,3 +32,18 @@ index 2fe8e8a..ba2b4c8 100644
  
  [tool.poetry.group.dev.dependencies]
  pandas = ">=1.6"
+@@ -53,8 +47,4 @@ target-version = ['py39']
+	| dist
+ )/
+ 
+-[build-system]
+-requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+-build-backend = "poetry_dynamic_versioning.backend"
+-
+-[tool.poetry-dynamic-versioning]
+-enable = true
+-vcs = "git"
+-style = "semver"
++[build-system]
++requires = ["poetry-core>=1.0.0"]
++build-backend = "poetry.core.masonry.api"
