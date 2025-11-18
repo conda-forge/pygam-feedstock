@@ -10,20 +10,17 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - 0001-patch-versions.patch
 
 build:
   number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  # build.sh script modifies pyproject.toml to remove poetry-dynamic-versioning
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
     - poetry
-    - poetry-dynamic-versioning
   run:
     - python >={{ python_min }}
     - numpy
