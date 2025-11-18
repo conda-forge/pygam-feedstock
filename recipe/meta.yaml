@@ -14,8 +14,6 @@ source:
 build:
   number: 1
   noarch: python
-  script: build.sh  # [not win]
-  script: {{ PYTHON }} -m pip install . --no-deps -vv  # [win]
 
 requirements:
   host:
