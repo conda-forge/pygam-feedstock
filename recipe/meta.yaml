@@ -14,13 +14,13 @@ source:
 build:
   number: 1
   noarch: python
+  # build.sh script modifies pyproject.toml to remove poetry-dynamic-versioning
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
     - poetry
-    - poetry-dynamic-versioning
   run:
     - python >={{ python_min }}
     - numpy
